@@ -1,5 +1,5 @@
 <hr>
-<table border=12px [ngSwitch]="activate">
+<table cellSpacing="5" border=12px [ngSwitch]="activate">
     <tr [ngClass]="activate ? 'text-color' : ''">
         <td>Nombre</td><td>Primer Apellido</td><td>Segundo Apellido</td><td>DNI</td><td *ngSwitchCase="false">Edad</td><td *ngSwitchCase="false">Lugar de nacimiento</td><td *ngSwitchCase="true">Estado Civil</td><td *ngSwitchCase="true">Hijos</td>
     </tr>
