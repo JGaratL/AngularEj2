@@ -1,6 +1,3 @@
-import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -8,11 +5,13 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class FormComponent {
 
+  activate = false;
+
   profileForm = new FormGroup({
     firstName: new FormControl('', [Validators.required]),
     lastName: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    phoneNumber: new FormControl(null, [Validators.required, Validators.pattern("^[0-9]*$")]),
+    phoneNumber: new FormControl(null , [Validators.required, Validators.pattern("^[0-9]*$")]),
     nationality: new FormControl('', [Validators.required]),
     userName: new FormControl('', [Validators.required, Validators.minLength(8)]),
     password: new FormControl('', [Validators.required, Validators.pattern( /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/)]),
@@ -21,6 +20,6 @@ export class FormComponent {
   });
 
   onSubmit() {
-    console.log(this.profileForm.value)
+    console.log(this.profileForm.value);
   }
 }
