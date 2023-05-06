@@ -1,11 +1,14 @@
-<hr>
-<table cellSpacing="5" border=12px [ngSwitch]="activate">
-    <tr [ngClass]="activate ? 'text-color' : ''">
+<br>
+<br>
+<table [ngSwitch]="activate">
+    <tr [ngClass]="activate ? 'text-color2' : 'text-color1'">
         <td>Nombre</td><td>Primer Apellido</td><td>Segundo Apellido</td><td>DNI</td><td *ngSwitchCase="false">Edad</td><td *ngSwitchCase="false">Lugar de nacimiento</td><td *ngSwitchCase="true">Estado Civil</td><td *ngSwitchCase="true">Hijos</td>
     </tr>
-    <tr *ngFor="let data of names">
+    <tr  class="tableStyle" *ngFor="let data of names">
         <td>{{data.name}}</td><td>{{data.first_name}}</td><td>{{data.second_name}}</td><td>{{data.dni}}</td><td *ngSwitchCase="false">{{data.age}}</td><td *ngSwitchCase="false">{{data.place_of_birth}}</td><td *ngSwitchCase="true">{{data.civil_status}}</td><td *ngSwitchCase="true">{{data.children}}</td>
     </tr>
 </table>
 <br>
-<button (click)="activate = !activate">Cambiar</button>
+<button class="buttonStyle" (click)="activate = !activate">Cambiar</button>
+<br>
+<br>
