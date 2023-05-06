@@ -1,4 +1,24 @@
-.text-color {
+.text-color1 {
+    font-size: 10px;
+    color: rgb(241, 241, 245);
+    background: #000;
+ }
+
+.text-color2 {
     font-size: 18px;
-    color: red;
+    color: rgb(15, 15, 15);
+    background: #e2dbf1;
+}
+
+.tableStyle {
+    border: 0px;
+    background-color: #fff0f0;
+}
+
+.buttonStyle {
+    margin: 5px;
+    border-radius: 4px;
+    border: rgb(40, 15, 70);
+    background-color: rgb(227, 229, 253);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
