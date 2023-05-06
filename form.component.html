@@ -1,18 +1,22 @@
-<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-    <p>Nombre:</p>
-    <input type="text" formControlName="firstName">
-    <p>Apellido:</p>
-    <input type="text" formControlName="lastName">
-    <p>Email:</p>
-    <input type="text" formControlName="email">
-    <p>Teléfono:</p>
-    <input type="text" formControlName="phoneNumber">
-    <p>Nacionalidad:</p>
-    <input type="text" formControlName="nationality">
-    <p>Nombre de Usuario:</p>
-    <input type="text" formControlName="userName">
-    <p>Password:</p>
-    <input type="text" formControlName="password">
-
-    <button type="submit" *ngIf="profileForm.valid">Enviar datos</button>
-</form>   
+<form class="formHead" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <p></p>
+    <input class="inputBox" type="text" formControlName="firstName" placeholder="Nombre">
+    <p></p>
+    <input class="inputBox" type="text" formControlName="lastName" placeholder="Apellido">
+    <p></p>
+    <input class="inputBox" type="text" formControlName="email" placeholder="Email">
+    <p></p>
+    <input class="inputBox" type="text" formControlName="phoneNumber" placeholder="Teléfono">
+    <p></p>
+    <input class="inputBox" type="text" formControlName="nationality" placeholder="Nacionalidad">
+    <p></p>
+    <input class="inputBox" type="text" formControlName="userName" placeholder="Nombre de Usuario">
+    <p></p>
+    <input class="inputBox" type="text" formControlName="password" placeholder="Password">
+    <p></p>
+    <button class="buttonStyle" type="submit" (click)="activate = !activate" *ngIf="profileForm.valid">Enviar datos</button>
+    <p class="confirmMessage" *ngIf="activate && profileForm.valid">Sus datos se han enviado correctamente</p>
+</form>  
+<br> 
+<br>
+<br>
